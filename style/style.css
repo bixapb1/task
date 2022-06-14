@@ -1,0 +1,49 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: gainsboro;
+}
+.row>div {
+    border: 1px solid black;
+    padding: 10px
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.img {
+    width: 400px;
+    height: 250px;
+}
+.btn-group {
+    padding-top: 30px;
+}
+button {
+    background-color: #4e9c4e; 
+    border: none;
+    border-radius: 50%;
+    color: white;
+    padding: 15px 15px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #4cf04c; 
+}
+button:disabled {
+    background-color: #333433; 
+    opacity: 0.3;
+}
