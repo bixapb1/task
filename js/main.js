@@ -39,21 +39,22 @@ const arrayImg = [
     option_image_thumb: "./assets/4.jpg",
   },
 ];
-let count = 0;
 const btn1 = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
 const img = document.querySelector(".img");
 
 btn1.addEventListener("click", () => {
-  if (count == 0) {
-    btn1.setAttribute("disabled", "true");
-    btn2.disabled = false;
-  } else img.src = arrayImg[--count].option_image_popup;
+  btn1.setAttribute("disabled", "true");
+  btn2.disabled = false;
+  img.src = arrayImg[getRandom(0, arrayImg.length)].option_image_popup;
 });
 
 btn2.addEventListener("click", () => {
-  if (count == arrayImg.length - 1) {
-    btn1.disabled = false;
-    btn2.setAttribute("disabled", "true");
-  } else img.src = arrayImg[++count].option_image_popup;
+  btn1.disabled = false;
+  btn2.setAttribute("disabled", "true");
+  img.src = arrayImg[getRandom(0, arrayImg.length)].option_image_popup;
 });
+
+function getRandom(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
